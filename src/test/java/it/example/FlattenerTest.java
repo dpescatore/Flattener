@@ -114,4 +114,13 @@ public class FlattenerTest {
         assertThrows(Exception.class, () -> Flattener.flat(arr), "Flattener should not work");
     }
 
+    @Test
+    @DisplayName("Simple flattener of null object")
+    public void testFlattenerWithNullArray() {
+
+        Object[] arr = null;
+
+        assertThrows(Exception.class, () -> Flattener.flat(arr), "Flattener should not work");
+    }
+
 }
